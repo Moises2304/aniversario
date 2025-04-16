@@ -1,0 +1,65 @@
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    background-color: rgba(209, 143, 143, 0.6);
+}
+.CAaniversario{
+    position: relative;
+    width: 250px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transform:  4s;
+}
+.CAaniversario:hover {
+transform: perspective(2500px) rotate(5deg);
+box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px;
+}
+.descorationstwo .descorationsthree ::after{
+    border-top: 40px solid #9b5de5;
+    top: 268px;
+    left: 355px;
+    transform: rotate(-40deg);
+}
+
+.feliz, .isa{
+    position: relative;
+    font-family: didot;
+    text-align: center;
+    backface-visibility: hidden;
+    font-size: 30px;
+}
+.feliz {
+    top: 198px;
+}
+.plate{
+    position: absolute;
+    width: 130px;
+    height: 5px;
+    background-color: blueviolet;
+    left: 60px;
+    top: 213px;
+}
+.Mana{
+    top: 123px; ;
+}
+
+
+.CAaniversario:hover.cartao{
+    transform: rotate(-160deg);
+}
+.CAaniversario:hover.front-texte{
+    display: none;
+}
+.CAaniversario:hover.wrap-daco{
+    display: none;
+}
+.CAaniversario:hover.wrap-dacotwo{
+    display: none;
+}
+.CAaniversario:hover.plate{
+    display: none;
+}

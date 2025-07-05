@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>FELIZ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FELIZ</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="CAaniversario">
-      <div class="cartao">  
-        <div class="front-texte">
-            <H3 class="feliz">FELIZ</H3>
-            <H3 class="Mana">ANIVERSARIO</H3>
-            <H3 class="isa">Isabel Ngovene</H3>
-        </div>
-      
+  <div class="CAaniversario">
+    <div class="cartao">
+      <div class="front-texte">
+        <h3 class="feliz">FELIZ</h3>
+        <h3 class="Mana">ANIVERSÁRIO</h3>
+        <h3 class="nome" id="nome-frente"></h3>
+      </div>
+
       <div class="wrap-daco">
         <div class="descorations"></div>
         <div class="descorationstwo"></div>
@@ -23,22 +23,48 @@
         <div class="descorations"></div>
         <div class="descorationsthree"></div>
       </div>
+
       <div class="plate">
         <div class="cake"></div>
         <div class="flame"></div>
       </div>
+
+      <button id="toggleModalBtn" class="toggle-btn">Ver mensagem</button>
+
       <div class="cartaodentro">
         <div class="inside-text">
-            <H3 class="feliz">FELIZ</H3>
-        <H3 class="Mana">ANIVERSARIO</H3>
-        <H3 class="isa">Isabel Ngovene</H3>
+          <h3 class="feliz">FELIZ</h3>
+          <h3 class="anir">ANIVERSÁRIO</h3>
+          <h3 class="nome" id="nome-dentro"></h3>
+        </div>
+
+        <div class="wshes">
+          <p>Querida maninha,</p>
+          <p>Feliz aniversário! Que Deus abençoe.</p>
+          <p class="n" id="nome-final"></p>
         </div>
       </div>
-      <div class="wshes">
-        <p>querida maninha,</p>
-        <p>Eeliz a niversario! que Deus abencoe.</p>
-        <p class="name">Isabel Nhantombo</p>
-      </div>
     </div>
+  </div>
+
+  <script>
+    // Solicitar o nome via prompt
+    const nome = prompt("Digite seu nomemoise:");
+
+    // Preencher os campos dinamicamente
+    document.getElementById("nome-frente").textContent = nome;
+    document.getElementById("nome-dentro").textContent = nome;
+    document.getElementById("nome-final").textContent = nome;
+
+    // Lógica do botão
+    const btn = document.getElementById('toggleModalBtn');
+    const modal = document.querySelector('.cartaodentro');
+
+    btn.addEventListener('click', () => {
+      const isOpen = modal.style.display === 'block';
+      modal.style.display = isOpen ? 'none' : 'block';
+      btn.textContent = isOpen ? 'Ver mensagem' : 'Fechar mensagem';
+    });
+  </script>
 </body>
 </html>

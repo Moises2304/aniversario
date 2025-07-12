@@ -1,49 +1,53 @@
- body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 150vh;
-      background-color: rgba(209, 143, 143, 0.6);
-      font-family: sans-serif;
-    }
+body {
+  margin: 0;
+  padding: 40px 0;
+  background-color: rgba(209, 143, 143, 0.6);
+  font-family: sans-serif;
+  overflow-y: auto; /* permite scroll vertical */
+}
 
-    .CAaniversario {
-      width: 300px;
-    }
+.CAaniversario {
+  width: 300px;
+  margin: 0 auto; /* centraliza horizontalmente */
+}
 
-    .cartao {
-      background: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
+.cartao {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
 
-    .toggle-btn {
-      cursor: pointer;
-      background-color: #9b5de5;
-      border: none;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      font-size: 16px;
-      margin-top: 15px;
-      transition: background-color 0.3s ease;
-    }
+.toggle-btn {
+  cursor: pointer;
+  background-color: #9b5de5;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
 
-    .toggle-btn:hover {
-      background-color: #7a44bf;
-    }
+.toggle-btn:hover {
+  background-color: #7a44bf;
+}
 
-    .cartaodentro {
-      display: none;
-      background-color: #f7f0ff;
-      padding: 20px;
-      margin-top: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(155, 93, 229, 0.5);
-    }
+.cartaodentro {
+  display: none;
+  background-color: #f7f0ff;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(155, 93, 229, 0.5);
 
-    .wshes p {
-      margin: 5px 0;
-    }
+  max-height: 300px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.wshes p {
+  margin: 5px 0;
+}
